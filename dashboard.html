@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>My Dashboard</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="brand">Belajar</div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-toggle">🌙</button>
+                <a class="nav-cta" href="index.html">Logout</a>
+            </div>
+        </nav>
+        <!-- NAVBAR END -->
+
+        <!-- CONTENT -->
+            <div class="content"">
+                <!-- PROFILE INTRO BOX -->
+                <div class="profile-intro">
+                    <div class="profile-photo" data-aos="fade-right" data-aos-duration="2000">
+                        <img src="poto.png" alt="Profile Photo">
+                    </div>
+                    <div class="profile-text" data-aos="fade-right" data-aos-duration="2000">
+                        <h1 class="halo">Halo, Saya</h1>
+                        <h1 class="vito">Muhammad Vito Fadgham</h1>
+                        <br>
+                        <p>Ini adalah portofolio saya, anda dapat melihat seluruh project yang sudah saya buat hanya di website ini!</p>
+                </div>
+                <!-- PROFILE INTRO BOX END -->
+                
+            </div>
+           
+        <!-- CONTENT END -->
+
+        <!-- BOX -->
+        
+            <div class="container">
+                 <div class="welcome">      
+                     <h1 data-aos="fade-right" data-aos-duration="2000">Our Projects</h1>
+                 </div>
+                <div class="box" data-aos="fade-up" data-aos-duration="2000">
+                    <h2>Project 1</h2>
+                    <img src="project.png" alt="project image">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque.</p>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-duration="2000">
+                    <h2>Project 2</h2>
+                    <img src="project.png" alt="project image">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque.</p>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-duration="2000">
+                    <h2>Project 3</h2>
+                    <img src="project.png" alt="project image"> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque.</p>
+                </div>
+            </div>
+        <!-- BOX END -->
+
+        <!-- BIODATA -->
+            <h1 class="biodataa" data-aos="fade-up" data-aos-duration="2000">BIODATA</h1>
+            <div class="biodata-card" data-aos="fade-up" data-aos-duration="2000">
+                <div class="biodata-item">
+                    <strong>Nama:</strong> John Doe
+                </div>
+                <div class="biodata-item">
+                    <strong>Umur:</strong> 25 Tahun
+                </div>
+                <div class="biodata-item">
+                    <strong>Alamat:</strong> Jakarta, Indonesia
+                </div>
+                <div class="biodata-item">
+                    <strong>Pekerjaan:</strong> Web Developer
+                </div>
+                <div class="biodata-item">
+                    <strong>Hobi:</strong> Coding, Membaca, Olahraga
+                </div>
+            </div>
+        <!-- BIODATA END -->
+        <script src="ini.js"></script>
+        <script>
+  AOS.init();
+</script>
+    </body>
+</html>

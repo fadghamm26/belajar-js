@@ -1,0 +1,346 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-gradient: linear-gradient(90deg, #232bc5, #6192df, #232bc5);
+    --text-color: #f8fafc;
+    --navbar-bg: rgba(255, 255, 255, 0.08);
+    --navbar-border: rgba(255, 255, 255, 0.12);
+    --box-bg: rgba(255, 255, 255, 0.08);
+    --box-border: rgba(255, 255, 255, 0.16);
+    --hover-bg: rgba(255, 255, 255, 0.18);
+    --active-bg: rgba(255, 255, 255, 0.14);
+    --cta-bg: #4f73f3;
+    --cta-hover: #2f51d6;
+    --halo-color: #072434;
+    --vito-color: #072434;
+    --text-shadow: #ffffff;
+}
+
+body.dark-mode {
+    --bg-gradient: linear-gradient(90deg, #1a1a2e, #16213e, #0f3460);
+    --text-color: #e2e8f0;
+    --navbar-bg: rgba(0, 0, 0, 0.3);
+    --navbar-border: rgba(255, 255, 255, 0.1);
+    --box-bg: rgba(0, 0, 0, 0.2);
+    --box-border: rgba(255, 255, 255, 0.1);
+    --hover-bg: rgba(255, 255, 255, 0.1);
+    --active-bg: rgba(255, 255, 255, 0.05);
+    --cta-bg: #3b82f6;
+    --cta-hover: #2563eb;
+    --halo-color: #60a5fa;
+    --vito-color: #4298e3f5;
+    --text-shadow: #000000;
+}
+
+body.dark-mode {
+    --bg-gradient: linear-gradient(90deg, #1a1a2e, #16213e, #0f3460);
+    --text-color: #e2e8f0;
+    --navbar-bg: rgba(0, 0, 0, 0.3);
+    --navbar-border: rgba(255, 255, 255, 0.1);
+    --box-bg: rgba(0, 0, 0, 0.2);
+    --box-border: rgba(255, 255, 255, 0.1);
+    --hover-bg: rgba(255, 255, 255, 0.1);
+    --active-bg: rgba(255, 255, 255, 0.05);
+    --cta-bg: #3b82f6;
+    --cta-hover: #2563eb;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    background: var(--bg-gradient);
+    color: var(--text-color);
+    transition: background 1s ease, color 1s ease;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 18px 28px;
+    margin: 24px auto;
+    max-width: 1120px;
+    background: var(--navbar-bg);
+    border-radius: 999px;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--navbar-border);
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    transition: background 0.5s ease, border-color 0.5s ease;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s ease, color 0.5s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--hover-bg);
+}
+
+.brand {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    list-style: none;
+}
+
+.nav-links a,
+.nav-cta {
+    display: flex;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    transition: background 0.2s ease, transform 0.2s ease, color 0.5s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    background: var(--hover-bg);
+    outline: none;
+}
+
+.nav-links a:active {
+    background: var(--active-bg);
+}
+
+.nav-cta {
+    background: var(--cta-bg);
+    font-weight: 600;
+}
+
+.nav-cta:hover {
+    background: var(--cta-hover);
+    transform: translateY(-1px);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    min-height: calc(100vh - 120px);
+    padding: 40px 20px;
+}
+
+.container .box {
+    background: var(--box-bg);
+    border: 1px solid var(--box-border);
+    border-radius: 30px;
+    padding: 30px;
+    width: min(320px, 100%);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+    transition: background 0.5s ease, border-color 0.5s ease;
+}
+
+.container .box h2 {
+    margin: 0 0 12px;
+    font-size: 1.4rem;
+}
+
+.container .box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    margin: 16px 0;
+}
+
+.container .box p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.login {
+    background-color: rgba(46, 136, 205, 0.96);
+    backdrop-filter: blur(10px);
+    background: linear-gradient(90deg, rgba(46, 136, 205, 0.96) 0%, rgba(46, 136, 205, 0.8) 100%);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 50px rgba(55, 98, 114, 0.15);
+    width: min(420px, 90vw);
+    
+}
+
+.login-button {
+    background-color: #1965a2;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: #0f4e8a;
+    transform: translateY(-1px);
+}
+
+.email {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #1965a2
+}
+
+.password {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #1965a2;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 60vh;
+}
+
+.profile-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 80px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(164, 53, 53, 0.12);
+}
+
+.profile-photo {
+    flex-shrink: 0;
+    background: var(--box-bg);
+    background: radial-gradient(circle, #041720, #324675);
+    border: 1px solid var(--box-border);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+    transition: background 0.5s ease, border-color 0.5s ease;
+}
+
+.profile-photo img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.profile-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.profile-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+    .profile-intro {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 30px;
+    }
+    
+    .profile-photo img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .profile-text h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.welcome {
+    margin: auto;
+    text-align: left;
+}
+
+.biodataa {
+    margin: auto;
+    text-align: center;
+
+}
+
+.biodata-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(18px);
+}
+
+.biodata-item {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.biodata-item strong {
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.halo {
+    color: var(--halo-color);
+    text-shadow: var(--text-shadow) 2px 2px 4px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+.vito {
+    color: var(--vito-color);
+    text-shadow: var(--text-shadow) 2px 2px 4px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
